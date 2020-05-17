@@ -83,8 +83,10 @@ public:
 	int GetRowsCount(); // функция получения количества строк матрицы
 
 	int GetColumnsCount(); // функция получения количества столбцов матрицы
+
+	template <typename T>
+	friend	ostream& operator<<(ostream& s, Matrix<T>& outputMatrix); // оператор вывода
+
 };
 
-template <typename T>
-ostream& operator<<(ostream& s, Matrix<T>& outputMatrix); // оператор вывода
 
